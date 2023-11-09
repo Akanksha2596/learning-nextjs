@@ -1,7 +1,6 @@
 //pre-rendering detail of particular postID dynamically in SSG
 //one needs to inform nextjs about all possible dynamic id we are going to pass as parameter or else we'll encounter path error
 // here comes the usage of getStaticPaths
-
 // import { useRouter } from "next/router";
 
 export default function Posts({ post }: any) {
@@ -70,10 +69,9 @@ export async function getStaticProps(context: any) {
       post: data,
     },
 
-    revalidate : 10 // we are asking next js to revalidate this post list page every 10 seconds this will ensure the updated posts
+    revalidate: 10, // we are asking next js to revalidate this post list page every 10 seconds this will ensure the updated posts
     // this will ensure the updated posts data is served almost immediately without having to rebuild the entire app
     // this is called INCREMENT STATIC REGENERATION (STALE WHILE REVALIDATE)
-
   };
 }
 // fallback key has three value:
