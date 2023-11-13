@@ -3,10 +3,10 @@ import "@/styles/globals.css"; //to add global styles : importing is imp under t
 
 import "bootstrap/dist/css/bootstrap.min.css"; // use bootstrap classes in our app
 import { ThemeProvider } from "styled-components";
-import "../styles/globals.css";
-import "../styles/layout.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import "../styles/globals.css";
+import "../styles/layout.css";
 import type { AppProps } from "next/app";
 
 // interface ExtendedComponentType extends NextComponentType {
